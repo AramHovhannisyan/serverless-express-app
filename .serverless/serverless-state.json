@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/my-express-serverless/dev/1715681853150-2024-05-14T10:17:33.150Z/my-express-serverless.zip"
+                "S3Key": "serverless/my-express-serverless/dev/1715684285329-2024-05-14T10:58:05.329Z/my-express-serverless.zip"
               },
               "Handler": "dist/app.handler",
               "Runtime": "nodejs20.x",
@@ -192,14 +192,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersionLIc9SHCrXlKHJGZwUFR2o7td299ooT8vNyamnCwos1g": {
+          "AppLambdaVersionpBrbzFIbQyD5oYE3dCGsSxwagvF31Wa3Mm6MW5XQEMA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "QHxjFVOpnx5fnmBnIFb3E9SvBj/h5CNKE7Gea5vnHaU="
+              "CodeSha256": "P+nRC4skBHEBRG9aAQojfmno8mzuw0h6uYjJ20k5qFM="
             }
           },
           "ApiGatewayRestApi": {
@@ -253,13 +253,13 @@
               }
             }
           },
-          "ApiGatewayResourceApiV1Bla": {
+          "ApiGatewayResourceApiV1Test2": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
                 "Ref": "ApiGatewayResourceApiV1"
               },
-              "PathPart": "bla",
+              "PathPart": "test2",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -402,13 +402,13 @@
               "AppLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodApiV1BlaGet": {
+          "ApiGatewayMethodApiV1Test2Get": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceApiV1Bla"
+                "Ref": "ApiGatewayResourceApiV1Test2"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -448,7 +448,7 @@
               "AppLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1715681844985": {
+          "ApiGatewayDeployment1715684277149": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -460,7 +460,7 @@
               "ApiGatewayMethodApiV1TestOptions",
               "ApiGatewayMethodApiV1TestGet",
               "ApiGatewayMethodApiV1TestPost",
-              "ApiGatewayMethodApiV1BlaGet"
+              "ApiGatewayMethodApiV1Test2Get"
             ]
           },
           "AppLambdaPermissionApiGateway": {
@@ -513,7 +513,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionLIc9SHCrXlKHJGZwUFR2o7td299ooT8vNyamnCwos1g"
+              "Ref": "AppLambdaVersionpBrbzFIbQyD5oYE3dCGsSxwagvF31Wa3Mm6MW5XQEMA"
             },
             "Export": {
               "Name": "sls-my-express-serverless-dev-AppLambdaFunctionQualifiedArn"
@@ -677,7 +677,7 @@
           },
           {
             "http": {
-              "path": "api/v1/bla",
+              "path": "api/v1/test2",
               "method": "get",
               "integration": "AWS_PROXY"
             }
@@ -689,7 +689,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersionLIc9SHCrXlKHJGZwUFR2o7td299ooT8vNyamnCwos1g"
+        "versionLogicalId": "AppLambdaVersionpBrbzFIbQyD5oYE3dCGsSxwagvF31Wa3Mm6MW5XQEMA"
       }
     },
     "configValidationMode": "warn",
@@ -714,7 +714,7 @@
     "artifact": "/home/aram/Desktop/node.js/serverless/express-ts-app/.serverless/my-express-serverless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/my-express-serverless/dev/1715681853150-2024-05-14T10:17:33.150Z",
+    "artifactDirectoryName": "serverless/my-express-serverless/dev/1715684285329-2024-05-14T10:58:05.329Z",
     "artifact": "my-express-serverless.zip"
   }
 }
